@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --background: #f5efe6;
+  --primary: #68432f;
+  --secondary: #b8875b;
+  --text: #493326;
+  --white: #fffaf4;
+}
+
+.menu-header {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.menu-header p {
+  color: #e4c49f;
+  letter-spacing: 3px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.menu-header h1 {
+  font-size: 45px;
+  margin: 15px 0;
+}
+
+.menu-header span {
+  font-size: 16px;
+  line-height: 1.8;
+}

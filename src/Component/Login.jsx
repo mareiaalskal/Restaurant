@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import "./Login.css";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [active, setActive] = useState(false);
-
+  const navigate = useNavigate();
   return (
     <div className={`container ${active ? "active" : ""}`}>
       {/* Login Form */}
@@ -25,7 +26,9 @@ function Login() {
             <a href="#forgot">Forgot Password?</a>
           </div>
 
-          <button className="btn">Login</button>
+          <button className="btn" onClick={() => navigate("/home")}>
+            Login
+          </button>
 
           <p>Or login with social platforms</p>
 

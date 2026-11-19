@@ -1,54 +1,60 @@
-import React, { useState } from "react";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import ScrollTriggered from "./Component/ScrollTriggered";
 import Login from "./Component/Login";
+import Home from "./Pages/Home";
+import Menu from "./Pages/Menu";
 
-function App() {
-  const [showLogin, setShowLogin] = useState(false);
-
+function MenuHome() {
   return (
-    <div>
-      {showLogin ? (
-        <Login />
-      ) : (
-        <div
-          style={{
-            backgroundColor: "#F5EFE6",
-            minHeight: "100vh",
-            padding: "20px",
-          }}
-        >
-          <h1
-            style={{
-              textAlign: "center",
-              marginTop: 30,
-              color: "#493326",
-            }}
-          >
-            Our Delicious Menu 🍽️
-          </h1>
+    <div
+      style={{
+        backgroundColor: "#F5EFE6",
+        minHeight: "100vh",
+        padding: "20px",
+      }}
+    >
+      <h1
+        style={{
+          textAlign: "center",
+          marginTop: 30,
+          color: "#493326",
+        }}
+      >
+        Our Delicious Menu 🍽️
+      </h1>
 
-          <ScrollTriggered />
+      <ScrollTriggered />
 
-          <div style={{ textAlign: "center", margin: "50px 0" }}>
-            <button
-              onClick={() => setShowLogin(true)}
-              style={{
-                backgroundColor: "#68432F",
-                color: "#FFFAF4",
-                border: "none",
-                padding: "15px 40px",
-                borderRadius: "30px",
-                fontSize: "18px",
-                cursor: "pointer",
-              }}
-            >
-              Login / Sign Up
-            </button>
-          </div>
-        </div>
-      )}
+      <div style={{ textAlign: "center", margin: "50px 0" }}>
+        <Link to="/login">
+          <button style={buttonStyle}>Login / Sign Up</button>
+        </Link>
+      </div>
     </div>
   );
 }
+
+function App() {
+  return (
+    <BrowserRouter basename="/Restaurant">
+      <Routes>
+        <Route path="/" element={<MenuHome />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/menu" element={<Menu />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+const buttonStyle = {
+  backgroundColor: "#68432F",
+  color: "#FFFAF4",
+  border: "none",
+  padding: "15px 40px",
+  borderRadius: "30px",
+  fontSize: "18px",
+  cursor: "pointer",
+};
 
 export default App;

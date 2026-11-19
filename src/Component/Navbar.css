@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --background: #f5efe6;
+  --primary: #68432f;
+  --secondary: #b8875b;
+  --text: #493326;
+  --white: #fffaf4;
+
+  --spacing-sm: 10px;
+  --spacing-md: 20px;
+  --spacing-lg: 40px;
+
+  --radius-sm: 10px;
+  --radius-md: 20px;
+  --radius-lg: 30px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #fffaf4;
+  box-shadow: 0 2px 10px rgba(80, 50, 30, 0.08);
+}
+
+/* Logo */
+.logo h2 {
+  color: #68432f;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Navigation Links */
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #493326;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+/* Hover */
+nav ul li a:hover {
+  color: #b8875b;
+}
+
+/* Login Button */
+nav ul li:last-child a {
+  background-color: #68432f;
+  color: #fffaf4;
+  padding: 10px 25px;
+  border-radius: 25px;
+}
+
+nav ul li:last-child a:hover {
+  background-color: #8b6045;
+}

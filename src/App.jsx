@@ -3,6 +3,7 @@ import ScrollTriggered from "./Component/ScrollTriggered";
 import Login from "./Component/Login";
 import Home from "./Pages/Home";
 import Menu from "./Pages/Menu";
+import Cart from "./Pages/Cart";
 
 function MenuHome() {
   return (
@@ -42,6 +43,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
         <Route path="/menu" element={<Menu />} />
+        <Route path="/Cart" element={<Cart />} />
       </Routes>
     </BrowserRouter>
   );

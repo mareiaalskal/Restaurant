@@ -5,7 +5,6 @@ function Cart() {
   return (
     <div>
       <Navbar />
-      <CartItems />
     </div>
   );
 }
